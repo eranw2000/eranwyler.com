@@ -120,6 +120,8 @@
   .rows .org { font-weight: 600; font-size: 15px; margin: 0 0 8px; }
   .rows p { margin: 0; max-width: 64ch; }
   .rows p + p { margin-top: 10px; }
+  .rows li.with-img { grid-template-columns: 130px 1fr 150px; align-items: start; }
+  .medal { display: block; width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px var(--rule); }
 
   /* patent register */
   .register { width: 100%; border-collapse: collapse; font-size: 15.5px; }
@@ -145,7 +147,8 @@
     .focus { grid-template-columns: 1fr; }
     .focus li:nth-child(odd) { border-right: 0; }
     .focus li:nth-child(even) { padding-left: 0; }
-    .rows li { grid-template-columns: 1fr; gap: 6px; }
+    .rows li, .rows li.with-img { grid-template-columns: 1fr; gap: 6px; }
+    .medal { width: 120px; height: 120px; margin-top: 10px; }
     .register thead { display: none; }
     .register tr { display: block; padding: 14px 0; border-bottom: 1px solid var(--rule); }
     .register td { display: block; padding: 0; border: 0; }
@@ -357,7 +360,7 @@
     <section id="honors" aria-labelledby="hon-h">
       <h2 id="hon-h"><span>06</span>Honors</h2>
       <ul class="rows body">
-        <li><div class="when">2016</div><div><h3>Medal of Honor</h3><p>From Major General Roni Numa, Commander of the IDF Central Command.</p></div></li>
+        <li class="with-img"><div class="when">2016</div><div><h3>Medal of Honor</h3><p>From Major General Roni Numa, Commander of the IDF Central Command.</p></div><img class="medal" src="assets/medal-of-honor.jpg" width="359" height="360" alt="The Medal of Honor: an Israeli flag with the Central Command emblem, inscribed in Hebrew with thanks from Major General Roni Numa"></li>
         <li><div class="when">2007</div><div><h3>Globes 40 under 40</h3><p>Named one of the 40 young managers moving the Israeli business market forward.</p></div></li>
         <li><div class="when">1998</div><div><h3>Technology Excellence Award</h3><p>ECI Telecom, for outstanding technology development.</p></div></li>
       </ul>
