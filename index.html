@@ -98,6 +98,11 @@
   section > h2 span { display: block; color: var(--accent); margin-bottom: 6px; }
   .body > p { margin: 0 0 18px; max-width: 66ch; }
   .body > p.big { font: 400 24px/1.45 var(--serif); }
+  .list { margin: 0 0 18px; padding-left: 20px; max-width: 66ch; list-style: disc; }
+  .list li { margin: 0 0 8px; padding-left: 4px; }
+  .list li::marker { color: var(--accent); }
+  .rows .list { margin: 10px 0; }
+  .rows .list li { display: list-item; padding: 0 0 0 4px; border: 0; }
 
   .focus { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 30px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--rule); }
   .focus li { padding: 22px 28px 22px 0; border-bottom: 1px solid var(--rule); }
@@ -153,6 +158,7 @@
   <header class="bar">
     <a class="home" href="#top">Eran Wyler</a>
     <nav aria-label="Sections">
+      <a href="#about">About</a>
       <a href="#work">Work</a>
       <a href="#experience">Experience</a>
       <a href="#patents">Patents</a>
@@ -182,8 +188,28 @@
       </figure>
     </div>
 
+    <section id="about" aria-labelledby="about-h">
+      <h2 id="about-h"><span>01</span>About</h2>
+      <div class="body">
+        <p class="big">Turning "No" into "Yes" for 30 years.</p>
+        <p>I'm an AI &amp; Data Solutions Architect. Companies bring me a business problem and get back a working system: I research their domain until I genuinely understand it, then design the architecture, build the system, and run it in production. One accountable partner from first conversation to live operation.</p>
+        <p>Since 2024, I have designed, built, and now operate production AI systems for clients in finance, legal, education, insurance, and consumer health, including:</p>
+        <ul class="list">
+          <li>A multi-agent financial advisory platform (live public web product)</li>
+          <li>A predictive learning-analytics platform, with risk scoring statistically validated against real outcomes</li>
+          <li>A B2B account-intelligence pipeline: scraping, enrichment, deduplication, LLM-adjudicated scoring</li>
+          <li>A voice + text knowledge-agent framework, deployed as four branded customer instances</li>
+          <li>RAG-based legal risk assessment with a secured in-tenant architecture, where no document leaves the client's cloud</li>
+          <li>Enterprise workflow automation built inside a Big 4 firm's Microsoft 365 tenant</li>
+        </ul>
+        <p>The systems combine both halves of the stack: the data machinery (acquisition, pipelines, entity resolution, scoring models) and the AI layer on top (multi-agent orchestration, RAG, guardrails, cost control), designed for explainability, auditability, and regulatory-aware governance.</p>
+        <p>Before consulting: I founded InfoGin (acquired by Wix) and grew its platform to more than 100M users; led product groups at Wix; wrote 15 patents, six granted by the USPTO, in contextual data analysis and adaptive systems (2006-2014), the same class of problems I now solve with modern AI.</p>
+        <p>If you have a business problem that data and AI should be solving, let's talk: <a href="mailto:eran@wyler.ai">eran@wyler.ai</a></p>
+      </div>
+    </section>
+
     <section id="work" aria-labelledby="work-h">
-      <h2 id="work-h"><span>01</span>What I do</h2>
+      <h2 id="work-h"><span>02</span>What I do</h2>
       <div class="body">
         <p class="big">I help organizations design and deliver production-grade AI, data, and decision intelligence systems.</p>
         <p>I have built and scaled products used by millions of people, working with Microsoft, AOL, Yahoo, Vodafone, KPN, Wix and other global companies. I founded InfoGin, which Wix acquired, and later led new product and revenue lines at Wix. I have spent over two decades turning "no" into "yes".</p>
@@ -198,7 +224,7 @@
     </section>
 
     <section id="impact" aria-labelledby="impact-h">
-      <h2 id="impact-h"><span>02</span>Beyond business</h2>
+      <h2 id="impact-h"><span>03</span>Beyond business</h2>
       <div class="body">
         <p>I founded a nonprofit academy that trains women from marginalized communities to become professional web designers. The program mixes technical training with personal development. Forty women have become professional web designers through it.</p>
         <p>I volunteered with the Israeli Medical Corps to build a platform for soldiers' well-being, nutrition and fitness, and a life-saving system for battlefield emergencies. It guides field teams to evacuate to the nearest suitable hospital for the type of injury, and alerts that hospital's staff to prepare. For this I received the Medal of Honor from Major General Roni Numa, Commander of the IDF Central Command.</p>
@@ -206,8 +232,27 @@
     </section>
 
     <section id="experience" aria-labelledby="exp-h">
-      <h2 id="exp-h"><span>03</span>Experience</h2>
+      <h2 id="exp-h"><span>04</span>Experience</h2>
       <ol class="rows body" reversed>
+        <li>
+          <div class="when">2024 to now</div>
+          <div>
+            <h3>AI, Data &amp; Automation Solutions Architect</h3>
+            <p class="org">Wyler AI &amp; Data Solutions, Founder &amp; Principal Consultant</p>
+            <p>Long-term architectural partner to organizations building AI and data systems. Every engagement starts with domain research and ends with a working system in production, with strategy, architecture, engineering, and operations covered by one accountable partner.</p>
+            <p>Selected delivered systems (clients described by domain):</p>
+            <ul class="list">
+              <li><b>Multi-agent financial advisory platform (fintech):</b> public web platform where specialized AI agents deliver market analysis and hedging strategies; multi-layer intent routing, real-data integrity guards, API cost controls, in live operation</li>
+              <li><b>Adaptive learning analytics platform (education):</b> predictive risk scoring and early-warning system over student learning data; models statistically validated against real course outcomes</li>
+              <li><b>B2B account-intelligence platform (sales &amp; marketing):</b> pipeline that discovers, scrapes, enriches, deduplicates, and scores thousands of target companies; LLM-adjudicated entity matching, waterfall email enrichment, human-in-the-loop review consoles</li>
+              <li><b>Voice + text knowledge-agent framework (productized):</b> reusable AI assistant framework over ingested knowledge bases (RAG), deployed as four branded customer instances</li>
+              <li><b>Legal risk-assessment system (law firm):</b> RAG-based document risk analysis developed with attorneys; secured in-tenant architecture, no document leaves the client's Microsoft cloud</li>
+              <li><b>Enterprise workflow automation (Big 4 firm):</b> recruiting and HR process automation on Microsoft 365 and Power Automate, inside the corporate tenant</li>
+              <li><b>Plus:</b> natural-language document automation, regulatory-monitoring AI agents, meeting-transcription analysis, commission-calculation tooling</li>
+            </ul>
+            <p>Core areas: multi-agent orchestration and RAG (Anthropic Claude, OpenAI GPT, Google Gemini incl. real-time voice; LangChain/LangGraph), predictive analytics and risk scoring, knowledge graphs (Neo4j), enterprise data pipelines, event-driven automation, production AI architecture (reliability, cost control, observability, governance)</p>
+          </div>
+        </li>
         <li>
           <div class="when">2020</div>
           <div>
@@ -292,7 +337,7 @@
     </section>
 
     <section id="patents" aria-labelledby="pat-h">
-      <h2 id="pat-h"><span>04</span>Patents</h2>
+      <h2 id="pat-h"><span>05</span>Patents</h2>
       <div class="body">
         <table class="register">
           <caption>Six granted US patents in content analysis and adaptation, from more than 15 applications.</caption>
@@ -310,7 +355,7 @@
     </section>
 
     <section id="honors" aria-labelledby="hon-h">
-      <h2 id="hon-h"><span>05</span>Honors</h2>
+      <h2 id="hon-h"><span>06</span>Honors</h2>
       <ul class="rows body">
         <li><div class="when">2016</div><div><h3>Medal of Honor</h3><p>From Major General Roni Numa, Commander of the IDF Central Command.</p></div></li>
         <li><div class="when">2007</div><div><h3>Globes 40 under 40</h3><p>Named one of the 40 young managers moving the Israeli business market forward.</p></div></li>
@@ -319,7 +364,7 @@
     </section>
 
     <section id="education" aria-labelledby="edu-h">
-      <h2 id="edu-h"><span>06</span>Education</h2>
+      <h2 id="edu-h"><span>07</span>Education</h2>
       <ul class="rows body">
         <li><div class="when">Feb to Aug 2025</div><div><h3>Professional Certificate, Generative AI &amp; LLM Hands-On</h3><p>Technion, Israel Institute of Technology. Computer Software Engineering.</p></div></li>
         <li><div class="when">1997 to 2000</div><div><h3>B.Sc. studies, Electronic Engineering</h3><p>Holon Institute of Technology, with a science teaching certificate. Paused in the third year to found InfoGin.</p></div></li>
@@ -328,7 +373,7 @@
     </section>
 
     <section id="contact" class="contact" aria-labelledby="con-h">
-      <h2 id="con-h"><span>07</span>Contact</h2>
+      <h2 id="con-h"><span>08</span>Contact</h2>
       <div class="body">
         <p class="big">Have a problem worth solving with AI or data? Let's talk.</p>
         <ul class="links">
