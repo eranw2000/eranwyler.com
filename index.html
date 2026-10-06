@@ -128,7 +128,8 @@
   .register { width: 100%; border-collapse: collapse; font-size: 15.5px; }
   .pat-head { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-bottom: 22px; }
   .pat-head p { margin: 0; max-width: 44ch; font: italic 400 20px/1.4 var(--serif); color: var(--muted); }
-  .seal { display: block; flex: none; width: 150px; height: auto; }
+  /* lifted so it sits centred between the section line above and the table header line below (64px vs 46.5px) */
+  .seal { display: block; flex: none; width: 150px; height: auto; position: relative; top: -9px; }
   .register th { text-align: left; font: 500 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding: 0 16px 12px 0; border-bottom: 1px solid var(--ink); }
   .register td { padding: 16px 16px 16px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
   .register td:first-child { font: 500 15px/1.5 var(--mono); white-space: nowrap; }
@@ -152,6 +153,7 @@
     .focus li:nth-child(even) { padding-left: 0; }
     .rows li, .rows li.with-img { grid-template-columns: 1fr; gap: 6px; }
     .medal { width: 120px; height: 120px; margin-top: 10px; top: 0; }
+    .seal { top: 0; }
     .register thead { display: none; }
     .register tr { display: block; padding: 14px 0; border-bottom: 1px solid var(--rule); }
     .register td { display: block; padding: 0; border: 0; }
