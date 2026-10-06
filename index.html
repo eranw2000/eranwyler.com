@@ -121,7 +121,8 @@
   .rows p { margin: 0; max-width: 64ch; }
   .rows p + p { margin-top: 10px; }
   .rows li.with-img { grid-template-columns: 130px 1fr 150px; align-items: start; }
-  .medal { display: block; width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px var(--rule); }
+  /* first row: 64px section padding above, 24px row padding below; lift by half the difference to centre between the lines */
+  .medal { display: block; width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px var(--rule); position: relative; top: -20px; }
 
   /* patent register */
   .register { width: 100%; border-collapse: collapse; font-size: 15.5px; }
@@ -150,7 +151,7 @@
     .focus li:nth-child(odd) { border-right: 0; }
     .focus li:nth-child(even) { padding-left: 0; }
     .rows li, .rows li.with-img { grid-template-columns: 1fr; gap: 6px; }
-    .medal { width: 120px; height: 120px; margin-top: 10px; }
+    .medal { width: 120px; height: 120px; margin-top: 10px; top: 0; }
     .register thead { display: none; }
     .register tr { display: block; padding: 14px 0; border-bottom: 1px solid var(--rule); }
     .register td { display: block; padding: 0; border: 0; }
