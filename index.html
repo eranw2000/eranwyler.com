@@ -125,7 +125,9 @@
 
   /* patent register */
   .register { width: 100%; border-collapse: collapse; font-size: 15.5px; }
-  .register caption { text-align: left; font: italic 400 20px/1.4 var(--serif); padding-bottom: 22px; color: var(--muted); }
+  .pat-head { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-bottom: 22px; }
+  .pat-head p { margin: 0; max-width: 44ch; font: italic 400 20px/1.4 var(--serif); color: var(--muted); }
+  .seal { display: block; flex: none; width: 150px; height: auto; }
   .register th { text-align: left; font: 500 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding: 0 16px 12px 0; border-bottom: 1px solid var(--ink); }
   .register td { padding: 16px 16px 16px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
   .register td:first-child { font: 500 15px/1.5 var(--mono); white-space: nowrap; }
@@ -342,8 +344,11 @@
     <section id="patents" aria-labelledby="pat-h">
       <h2 id="pat-h"><span>05</span>Patents</h2>
       <div class="body">
-        <table class="register">
-          <caption>Six granted US patents in content analysis and adaptation, from more than 15 applications.</caption>
+        <div class="pat-head">
+          <p id="pat-cap">Six granted US patents in content analysis and adaptation, from more than 15 applications.</p>
+          <img class="seal" src="assets/uspto-seal.webp" width="356" height="360" alt="Seal of the United States Patent and Trademark Office">
+        </div>
+        <table class="register" aria-describedby="pat-cap">
           <thead><tr><th scope="col">Patent</th><th scope="col">Granted</th><th scope="col">Subject</th></tr></thead>
           <tbody>
             <tr><td><a href="https://patents.google.com/patent/US7047033B2/en">US 7,047,033</a></td><td>May 2006</td><td>Automatic content adaptation: analyzing, processing and formatting web pages.</td></tr>
